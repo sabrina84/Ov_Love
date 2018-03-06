@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="=text/css" href="{% static 'style.css' %}"/>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 200px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 20px 12px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 200px;
+}
+</style>
+</head>
+<style >
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.right {
+    position: absolute;
+    right: 10px;
+    width: 300px;
+    padding: 0px;
+}
+.right2 {
+    position: absolute;
+    right: 10px;
+    width: 600px;
+    padding: 0px;
+}
+
+.left {
+    position: absolute;
+    left: 10px;
+    width: 600px;
+    padding: 0px;
+}
+body  {
+
+    background: #cccccc url("http://oi66.tinypic.com/2u8f5g1.jpg") center;
+}
+.carousel .item {
+  height: 300px;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 300px;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+	  height:100%;
+      margin: auto;
+.button {
+	border-radius: 12px;
+	position: absolute;
+    background-color: khaki;
+    border:1px cornsilk;
+    color: black;
+	height:40px;
+	width:150px;
+    left: 1000px;
+    top : 0px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+	position:absolute;
+    background-color:red;
+    border: none;
+    color: white;
+	left: 800px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+</style>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'home' %}">OvLove</a>
+    </div>
+      <div class="right">
+    <ul class="nav navbar-nav">
+      <li class="active" ><a href="{% url 'login' %}">Log in</a></li>
+        <li class="active"><a href="{% url 'signup' %}">Sign up</a></li>
+        <li class="active"><a href="{% url 'faq' %}">FAQ</a></li>
+    </ul>
+</div>
+    <!-- <button class="btn btn-danger navbar-btn">Create Receipt</button> -->
+
+  </div>
+</nav>
+<div class="container">
+
+  <div id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li class="item1 active"></li>
+      <li class="item2"></li>
+      <li class="item3"></li>
+      <li class="item4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="{% static 'image/baby.jpg' %}">
+
+      </div>
+
+      <div class="item">
+        <img src="{% static 'image/hes.jpg' %}"   >
+
+      </div>
+
+      <div class="item">
+        <img src="{% static 'image/rep.jpg' %}" >
+
+      </div>
+
+      <div class="item">
+        <img src="{% static 'image/safe.jpg' %}"  >
+
+      </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <!--a class="left carousel-control" href="#myCarousel" role="button">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a-->
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    // Activate Carousel
+    $("#myCarousel").carousel();
+
+    // Enable Carousel Indicators
+    $(".item1").click(function(){
+        $("#myCarousel").carousel(0);
+    });
+    $(".item2").click(function(){
+        $("#myCarousel").carousel(1);
+    });
+    $(".item3").click(function(){
+        $("#myCarousel").carousel(2);
+    });
+    $(".item4").click(function(){
+        $("#myCarousel").carousel(3);
+    });
+
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#myCarousel").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#myCarousel").carousel("next");
+    });
+});
+</script>
+<br><br>
+<font color="purple">
+  <h2>Do you know what PCOS is?</h2></font>
+  <font size="4">
+   <p> Polycystic Ovarian Syndrome- a name of concern that is increasing at a good rate among women of
+    reproductive age. At least 10-30% of women of reproductive age are suffering this, knowingly or unknowingly.
+      Actually these symptoms are neglected by our women. Most of them consider it normal. And that is the main reason of late presentation.
+      They are bothered only after marriage when they try to get pregnant but can not.
+        It is a non curable disease .Once it happens,it remains forever,but it can be controlled.
+      If it is diagnosed earlier the complications are less.
+</p>
+    <p>
+      Be careful about irregular period. It may not be PCOS, but if it is, lifestyle modification is necessary.
+    </p>
+
+<br><br>
+
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openTabs(event, 'Symptoms')" id="defaultOpen">Symptoms</button>
+  <button class="tablinks" onclick="openTabs(event, 'Results')">Results</button>
+  <button class="tablinks" onclick="openTabs(event, 'control')">How to control</button>
+</div>
+
+<div id="Symptoms" class="tabcontent">
+  <h3>Symptoms</h3>
+  <p>The main symptom of PCOS is irregular menstrual cycle. Usually you should have your period within 28 to 35 days.
+      Missing period for more than three months should be taken seriously. It can also indicate you are pregnant, so you better
+      check! If you have less than 9 periods a year, you should certainly see a doctor. ...
+  </p>
+    <a href="{% url 'symptom' %}" >See more</a>
+</div>
+
+<div id="Results" class="tabcontent">
+  <h3>Results</h3>
+  <p>
+    PCOS is one of the most common causes for infertility. In normal menstrual cycle (from first day of period up to previous
+      day of another one) only one  <a href="https://www.britannica.com/science/ovum"  target="_blank">ovum  </a>
+      is released from one follicle and only
+      one follicle become mature per month. In PCOS, several follicle becomes mature but no ovum is released. ...
+  </p>
+    <a href="{% url 'result' %}" >See more</a>
+</div>
+
+<div id="control" class="tabcontent">
+  <h3>How to control</h3>
+  <p>
+      It is not curable, but controllable. Patients with pcos must be regular ,cautious…
+
+  </p>
+    <a href="{% url 'control' %}" >See more</a>
+</div>
+
+<script>
+function openTabs(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+    <br><br>
+
+      <font size="5">Want to know more? <a href="{% url 'question' %}" >Ask Questions. </a></font>
+      <br><br>
+      </font>
+
+
+<!--div class="right2">
+
+    dkashf fuayr fonm cfkvb egrufkfnsklrf flaeiurff nvjdf jesdhske ewehefjb edhejwhe eedfwejk djj dfask
+</div>
+<div class="left">
+    dkashf fuayr fonm cfkvb egrufkfnsklrf flaeiurff nvjdf jesdhske ewehefjb edhejwhe eedfwejk djj dfask
+</div-->
+
+<!--form name="form" method="post" >{% csrf_token %}
+
+     <!--body id="bg" style="background-image: url('{% static 'image/2.jpg'%}')";-->
+     <!--font face="Comic sans MS" > </font>
+
+     <div style="max-width: 250px;" class="right">
+         <font face="Comic sans MS" size="4" >
+            <a href="{% url 'login' %}" >Log In   </a>|<a href="{% url 'signup' %}" >  Sign Up </a>
+         </font>
+                <button style="border: 0px; background-color: green; margin-top: 8%; height: 35px; width: 80%; margin-left: 19%"
+                        type="submit" value="Submit"><strong>Submit</strong></button>
+
+</form-->
+</font>
+
+</body>
+</html>

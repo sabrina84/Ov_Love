@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="=text/css" href="{% static 'ok/style.css' %}"/>
+
+<html>
+<style >
+
+.center {
+    margin: auto;
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+}
+.right {
+    position: absolute;
+    right: 100px;
+    width: 500px;
+    padding: 10px;
+}
+.left {
+    position: absolute;
+    left: 0px;
+    width: 500px;
+    padding: 10px;
+}
+body  {
+
+    background: #cccccc url("http://oi66.tinypic.com/2u8f5g1.jpg") center;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+	  height:55%;
+      margin: auto;
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Log In Failed</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'home_' %}">OvLove</a>
+    </div>
+      </nav>
+
+
+
+    <!--img src="{% static 'image/bg.jpg' %}" align="right"-->
+    <div class="center" >
+
+        <h3>Log In Failed :( Username or password incorrect.</h3><!--a href="{% url 'login' %}" > Try again </a></h2-->
+                        <form name="form" action="{% url 'loggedin' %}" method="post">{% csrf_token %}
+
+    <div class="center" >
+
+
+                    <font  size="5" >Username:</font>
+
+            <input type="text" placeholder="Username" name="username" required/>
+<br>
+                    <font size="5" >Password: </font>
+
+                <input type="password" placeholder="Password" name="password" required/>
+<br><br>
+
+               <div style="max-width: 200px;"  >
+               <font color="black">
+                <button style="border: 0px; background-color: #4285F4; margin-top: 8%; height: 35px; width: 80%; margin-left: 19%"
+                        type="submit" value="Submit"><strong>Submit</strong></button>
+                </font>
+        </div>
+
+    </div>
+                            </form>
+             Not in the society? <a href="{% url 'signup' %}" >  Sign Up </a>to continue.
+
+
+
+
+
+    </div></body>
+
+</body></html>
+
+
+
+
+
+

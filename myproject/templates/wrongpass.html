@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="=text/css" href="{% static 'ok/style.css' %}"/>
+
+<html>
+<style >
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.right {
+    position: absolute;
+    right: 100px;
+    width: 500px;
+    padding: 10px;
+}
+.left {
+    position: absolute;
+    left: 0px;
+    width: 1000px;
+    padding: 10px;
+}
+body  {
+
+    background: #cccccc url("http://oi66.tinypic.com/2u8f5g1.jpg") center;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+	  height:55%;
+      margin: auto;
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Fail</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'home_' %}">OvLove</a>
+    </div></div>
+      </nav>
+
+    <form name="form" action="{% url 'signedup' %}" method="post">{% csrf_token %}
+
+
+        <h2>Looks like the passwords don't match :( Please try again.</h2>
+
+              <div style="max-width: 600px;" class="center">
+             <br><br>
+                    <font  size="4"  ><label>Name:</label><br>
+               <input type="text"  placeholder="Name" name="name" required/>
+<br>
+                   <label>Username:</label><br>
+                        <input type="text" placeholder="Username" name="username" required/>
+<br>
+                   <label>Password:</label><br>
+                        <input type="password" placeholder="Password" name="password" required/>
+<br>
+                        <label>Retype Password:</label><br>
+                        <input type="password" placeholder="Password" name="repass" required/>
+<br>
+                    <!--font face="Comic sans MS" size="5" >Email:</font>
+                <input type="email"  placeholder="Email" name="email" required />
+<br-->
+                        <label> Age:</label><br>
+                        <input type="text" placeholder="Age" name="age" required/><br>
+                        <!--label>Average duration of period(in days):</label><br>
+             <select name="per_dur">
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                <option value="4">4</option>
+                 <option value="5">5</option>
+                <option value="6">6</option>
+                   <option value="7">7</option>
+                <option value="8">8</option>
+                 <option value="9">9</option>
+                <option value="10">10</option>
+        </select>
+<br-->
+                        <label>Start date of last period:</label><br>
+            <input type="date" name="start_date" required>
+<br>
+                        <label>End date of last period:</label><br>
+            <input type="date" name="end_date" required>
+<br><br>
+
+
+
+            <div style="max-width: 200px;"  >
+               <font color="black">
+                <button style="border: 0px; background-color: #4285F4; margin-top: 8%; height: 35px; width: 80%; margin-left: 19%"
+                        type="submit" value="Submit"><strong>Submit</strong></button>
+                </font>
+        </div>
+                    </font>
+        </div>
+        </div>
+    </form></body>
+</body></html>
+
+
+
+
+

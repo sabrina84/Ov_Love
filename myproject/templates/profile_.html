@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="=text/css" href="{% static 'ok/style.css' %}"/>
+
+<html>
+<style >
+
+
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+    .center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.right {
+    position: absolute;
+    right: 10px;
+    width: 300px;
+    padding: 0px;
+}
+.right2 {
+    position: absolute;
+    right: 0px;
+    width: 500px;
+    padding: 10px;
+}
+
+.left {
+    position: absolute;
+    left: 0px;
+    width: 600px;
+    padding: 10px;
+}
+
+        table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+    </style>
+</head>
+<style>
+
+body  {
+
+    background: #cccccc url("http://oi66.tinypic.com/2u8f5g1.jpg") center;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+	  height:55%;
+      margin: auto;
+.carousel .item {
+  height: 300px;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 300px;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+	  height:100%;
+      margin: auto;
+.button {
+	border-radius: 12px;
+	position: absolute;
+    background-color: khaki;
+    border:1px cornsilk;
+    color: black;
+	height:40px;
+	width:150px;
+    left: 1000px;
+    top : 0px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+	position:absolute;
+    background-color:red;
+    border: none;
+    color: white;
+	left: 800px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'home_' %}">OvLove</a>
+    </div>
+      <div class="right">
+    <ul class="nav navbar-nav">
+      <!--li class="active"><a href="{% url 'login' %}">Log in</a></li-->
+        <li class="active"><a href="{% url 'profile' %}">{{username}}</a></li>
+        <li class="active"><a href="{% url 'loggedout' %}">Log out</a></li>
+        <li class="active"><a href="{% url 'faq' %}">FAQ</a></li>
+    </ul>
+</div>
+  </div>
+        </nav>
+
+
+<font color="purple">
+
+ <font size="5"> Hello<br></font>
+    <font size="6">{{prof.name}}</font></font><br><br>
+    <font size="4">
+        <div class="left">
+            {% if prof.mc > 0  %}
+                Looks like you have missed your last period. <br>
+             {% if prof.mc >= 3 %}
+                      You have missed several periods in a row. It's time you became concerned.
+            May be you should see a doctor.<br>
+            {% endif %}
+
+            <br><br>
+
+            {% endif %}
+            {% if prof.days < 24 %}
+                {% if prof.days >= 0 %}
+            You have {{prof.days}} days left for next your period!<br><br>
+            {% endif %}
+            {% endif %}
+
+            {% if prof.days < 8 %}
+                {% if prof.days <= 0 %}
+                      You should have gotten it by now.<br>
+            {% endif %}
+             <form name="form" action="{% url 'gotit' %}" method="post">{% csrf_token %}
+                 Got it already?<br>
+                  <div style="max-width: 200px;"  >
+                <font color="black">
+                <button style="border: 0px; background-color: #4285F4; margin-top: 8%; height: 35px; width: 80%; margin-left: 19%"
+                        type="submit" value="Submit"><strong>Got it</strong></button>
+                </font>
+        </div>
+             </form>
+            {% endif %}
+            <br>
+            It is nice to take lots of iron, minerals and calcium during period. (other advices)
+            </div>
+        <div class="right2">
+ <h2><font color="purple"> Are you in right shape?</font></h2>
+            You need {{cal}} calories everyday.
+             <br><br>
+             {% if bmi == 1 %}
+                      You are underweight. Eat healthy and workout.<br>
+            {% endif %}
+             {% if bmi == 2 %}
+                      Your weight is normal. keep it up!<br>
+            {% endif %}
+             {% if bmi == 3 %}
+                      You are overweight. You should have restrictions over certain foods and develop workout plan.
+            Remember, being overweight can cause irregular period. <br>
+            {% endif %}
+    <br>
+             You can see full standard calorie chart<a href="{% url 'calorie' %}" > here </a>and
+            create a work out plan<a href="{% url 'workout' %}" > here </a>
+        </div>
+</font>
+</font>
+
+
+</body>
+</html>

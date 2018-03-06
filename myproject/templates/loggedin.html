@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="=text/css" href="{% static 'ok/style.css' %}"/>
+
+<html>
+<style >
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.right {
+    position: absolute;
+    right: 100px;
+    width: 500px;
+    padding: 10px;
+}
+.left {
+    position: absolute;
+    left: 0px;
+    width: 500px;
+    padding: 10px;
+}
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+body  {
+
+    background: #cccccc url("http://oi66.tinypic.com/2u8f5g1.jpg") center;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+	  height:55%;
+      margin: auto;
+
+</style>
+<body>
+
+<br> <br><br>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'home_' %}">OvLove</a>
+    </div></div>
+        </nav>
+
+    <form>
+<font face="Comic sans MS" size="6" color="blue">  {{ username }}</font>
+
+</form>
+</body>
+</html>
